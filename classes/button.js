@@ -1,6 +1,6 @@
 
-import { errors } from "errors.js"; // Make sure the path is correct
-import { error_codes } from "errors.js";
+import { basic_error } from "./errors.js"; // Make sure the path is correct
+import { error_codes } from "./errors.js";
 
 export class button{
     // private members
@@ -13,7 +13,7 @@ export class button{
         this.button_element = document.getElementById(id);
         
         if(this.button_element == null){
-            const error = new errors(error_codes.ELEMENT_ID_IS_NULL);
+            const error = new basic_error(error_codes.ELEMENT_ID_IS_NULL);
             error.output_error_info();
         }
         
@@ -56,7 +56,7 @@ export class button{
 
     add_button_callback(call_back_function, action){
         if (this.#button_element == null) {
-            const error = new errors(error_codes.ELEMENT_ID_IS_NULL);
+            const error = new basic_error(error_codes.ELEMENT_ID_IS_NULL);
             error.output_error_info();
             return error;
         }
@@ -70,12 +70,12 @@ export class button{
 
             this.#set_event_listeners.push(this.#create_call_backs(call_back_function,action));
         } catch (caught_error) {
-            const error = new errors(caught_error.message);
+            const error = new basic_error(caught_error.message);
             error.output_error_info();
             return error;
         }
 
-        return new errors(error_codes.SUCCESS);
+        return new basic_error(error_codes.SUCCESS);
     }
 
     remove_button_callback(call_back_obj){
