@@ -23,6 +23,9 @@ body {
 
 /* Header styles */
 header {
+    display: flex;             /* Enables Flexbox */
+    flex-direction: column;    /* Stacks items vertically */
+    align-items: center;       
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     color: white;
     padding: 20px;
@@ -30,6 +33,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    
 }
 
 /* Navigation styles */
@@ -74,5 +78,24 @@ footer {
     position: relative;
     bottom: 0;
 }
+
+.container {
+    display: flex;             /* Enables Flexbox */
+    flex-direction: column;    /* Stacks items vertically */
+    align-items: center;       /* Centers items horizontally */
+    gap: 15px;                 /* Adds spacing between items */
+    height: 100vh;             /* Full viewport height */
+    padding: 20px;
+}
+
+.box {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+}
+
 
 
