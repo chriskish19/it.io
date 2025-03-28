@@ -1,0 +1,27 @@
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.blinking-cursor {
+    animation: blink 1s infinite;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-repeat: no-repeat;
+    color: white; /* Adjust text color for visibility */
+}
+
+.overlay {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    margin: 20px;
+    border-radius: 10px;
+}
