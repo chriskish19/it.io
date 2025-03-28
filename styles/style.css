@@ -120,7 +120,30 @@ nav ul li a:hover {
     z-index: 1;  /* Ensures it's above the background */
     width: auto;
     height: 100vh;
-    flex-grow: 1;
+}
+
+/* Media Query for Smaller Screens (Mobile) */
+@media (max-width: 768px) {
+    /* Stack the cube, title, and nav vertically on small screens */
+    .main_overlay {
+        flex-direction: column;  /* Stack vertically */
+    }
+
+    .cube {
+        margin-bottom: 20px;  /* Add space between cube and other content */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;  /* Stack the nav items vertically */
+        align-items: center;     /* Center nav items */
+        gap: 10px;               /* Space between nav items */
+    }
+
+    nav li {
+        display: block;         /* Make each nav item block-level */
+        margin: 10px 0;          /* Add spacing between items */
+    }
 }
 
 
